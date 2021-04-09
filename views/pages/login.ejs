@@ -20,8 +20,17 @@
       <div class="login-html">
         <h2>APP NAME</h2>
         <div class="container">
-          <input id="patient" type="radio" name="tab" class="sign-in" checked onclick="check_tab(this.id)" /><label for="tab-1" class="tab"> Patient </label>
-          <input id="staff" type="radio" name="tab" class="sign-up" onclick="check_tab(this.id)" /><label for="tab-2" class="tab">Sign Up</label>
+          <input id="patient" type="radio" name="tab" class="sign-in" checked onclick="check_tab(this.id)" /><label
+            for="patient"
+            class="tab"
+          >
+            Patient
+          </label>
+          <input id="staff" type="radio" name="tab" class="sign-up" onclick="check_tab(this.id)" /><label
+            for="staff"
+            class="tab"
+            >Sign Up</label
+          >
           <div class="login-form">
             <div class="sign-in-htm">
               <h3>Login for Patient</h3>
@@ -31,6 +40,9 @@
             </div>
             <div class="sign-up-htm">
               <h3>Login for Staff</h3>
+              <div class="signin_button">
+                <div id="firebaseui-auth-container"> </div>
+              </div>
             </div>
           </div>
         </div>
