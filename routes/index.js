@@ -14,7 +14,7 @@ router.get("/main", checkCookie, (req, res) => {
   if (category == "doctor") {
     res.render("pages/patient_list");
   } else {
-    res.render("pages/main");
+    res.render("pages/records");
   }
 });
 
