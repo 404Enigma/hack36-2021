@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Treatment</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/records.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Dawai Wale💊</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <li>
+            <a href="/main">&nbsp; Records</a>
+          </li>
+          <!-- <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">&nbsp; Pages</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li> -->
+          <li class="active">
+            <a href="#">&nbsp; Treatment</a>
+          </li>
+          <li>
+            <a href="#">&nbsp; Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i>
+              <span></span>
+            </button>
+            <!-- <button class="btn btn-danger">Logout</button> -->
+            <a href="/logout" class="btn btn-danger" type="button">Logout</a>
+          </div>
+        </nav>
+
+        <h2>Treatment</h2>
+        <div class="container py-2">
+          <!-- timeline item 1 -->
+          <div class="row no-gutters">
+            <div class="col-sm"> <!--spacer--> </div>
+            <!-- timeline item 1 center dot -->
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-light border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <!-- timeline item 1 event content -->
+            <div class="col-sm py-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="float-right text-muted small">Jan 9th 2019 7:00 AM</div>
+                  <h4 class="card-title text-muted">Day 1 Orientation</h4>
+                  <p class="card-text">Welcome to the campus, introduction and get started with the tour.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 2 -->
+          <div class="row no-gutters">
+            <div class="col-sm py-2">
+              <div class="card border-success shadow">
+                <div class="card-body">
+                  <div class="float-right text-success small">Jan 10th 2019 8:30 AM</div>
+                  <h4 class="card-title text-success">Day 2 Sessions</h4>
+                  <p class="card-text"
+                    >Sign-up for the lessons and speakers that coincide with your course syllabus. Meet and greet with
+                    instructors.</p
+                  >
+                  <button
+                    class="btn btn-sm btn-outline-secondary"
+                    type="button"
+                    data-target="#t22_details"
+                    data-toggle="collapse"
+                    >Show Details ▼</button
+                  >
+                  <div class="collapse border" id="t22_details">
+                    <div class="p-2 text-monospace">
+                      <div>08:30 - 09:00 Breakfast in CR 2A</div>
+                      <div>09:00 - 10:30 Live sessions in CR 3</div>
+                      <div>10:30 - 10:45 Break</div>
+                      <div>10:45 - 12:00 Live sessions in CR 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-success">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm"> <!--spacer--> </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 3 -->
+          <div class="row no-gutters">
+            <div class="col-sm"> <!--spacer--> </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-danger border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm py-2">
+              <div class="card border-danger">
+                <div class="card-body">
+                  <div class="float-right text-danger small">Jan 11th 2019 8:30 AM</div>
+                  <h4 class="card-title text-danger">Day 3 Sessions</h4>
+                  <p> Shoreditch vegan artisan Helvetica. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/row-->
+          <!-- timeline item 4 -->
+          <div class="row no-gutters">
+            <div class="col-sm py-2">
+              <div class="card border-danger">
+                <div class="card-body">
+                  <div class="float-right text-danger small">Jan 12th 2019 11:30 AM</div>
+                  <h4 class="card-title text-danger">Day 4 Wrap-up</h4>
+                  <p>Join us for lunch in Bootsy's cafe across from the Campus Center.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+              <div class="row h-50">
+                <div class="col border-right">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+              <h5 class="m-2">
+                <span class="badge badge-pill bg-danger border">&nbsp;</span>
+              </h5>
+              <div class="row h-50">
+                <div class="col">&nbsp;</div>
+                <div class="col">&nbsp;</div>
+              </div>
+            </div>
+            <div class="col-sm"> <!--spacer--> </div>
+          </div>
+          <!--/row-->
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper.JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+      integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+          theme: "minimal",
+        });
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar, #content").toggleClass("active");
+          $(".collapse.in").toggleClass("in");
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+        });
+      });
+    </script>
+  </body>
+</html>
