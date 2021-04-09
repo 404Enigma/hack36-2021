@@ -13,8 +13,10 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 const index = require("./routes/index");
+const auth = require("./routes/auth");
 
 app.use(index);
+app.use(auth);
 
 app.listen(PORT, () => {
   console.log(`Listining on ${PORT}`);
