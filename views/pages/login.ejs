@@ -13,13 +13,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
-    <div class="container" id="container">
-      <div class="jumbotron jumbotron-fluid rounded-lg">
+    <div class="login-wrap">
+      <div class="login-html">
+        <h2>APP NAME</h2>
         <div class="container">
-          <h1 style="text-align: center">Sign in with Google </h1>
-          <div id="firebaseui-auth-container"> </div>
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label for="tab-1" class="tab">
+            Patient
+          </label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up" /><label for="tab-2" class="tab">Sign Up</label>
+          <div class="login-form">
+            <div class="sign-in-htm">
+              <h3>Login for Patient</h3>
+              <div class="signin_button">
+                <div id="firebaseui-auth-container"> </div>
+              </div>
+            </div>
+            <div class="sign-up-htm">
+              <h3>Login for Staff</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,4 +86,3 @@
     </script>
   </body>
 </html>
-© 2021 GitHub, Inc.
