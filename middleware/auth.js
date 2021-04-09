@@ -1,6 +1,6 @@
 const admin = require("../config/db/db");
 
-function savecookie(idtoken, res) {
+function savecookie(idtoken, res, category) {
   const expiresIn = 60 * 60 * 24 * 5 * 1000;
   admin
     .auth()
@@ -16,8 +16,10 @@ function savecookie(idtoken, res) {
           .then(function (decodedClaims) {
             //save users to database
             console.log(decodedClaims);
+            //save patient and doctor
             //save_user(decodedClaims.uid, decodedClaims.email, decodedClaims.name);
-            res.redirect("/main");
+
+            res.redirect("/main?category=" + category);
           });
       },
       (error) => {

@@ -8,7 +8,14 @@ router.get("/", (req, res) => {
 });
 
 router.get("/main", checkCookie, (req, res) => {
-  res.render("pages/main");
+  const category = req.query.category;
+
+  console.log(category);
+  if (category == "doctor") {
+    res.render("pages/patient_list");
+  } else {
+    res.render("pages/main");
+  }
 });
 
 module.exports = router;

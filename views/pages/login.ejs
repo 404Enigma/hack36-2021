@@ -20,10 +20,8 @@
       <div class="login-html">
         <h2>APP NAME</h2>
         <div class="container">
-          <input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label for="tab-1" class="tab">
-            Patient
-          </label>
-          <input id="tab-2" type="radio" name="tab" class="sign-up" /><label for="tab-2" class="tab">Sign Up</label>
+          <input id="patient" type="radio" name="tab" class="sign-in" checked onclick="check_tab(this.id)" /><label for="tab-1" class="tab"> Patient </label>
+          <input id="staff" type="radio" name="tab" class="sign-up" onclick="check_tab(this.id)" /><label for="tab-2" class="tab">Sign Up</label>
           <div class="login-form">
             <div class="sign-in-htm">
               <h3>Login for Patient</h3>
@@ -41,6 +39,8 @@
 
     <!-- SCRIPTS -->
     <script>
+      let tab;
+
       const firebaseConfig = {
         apiKey: "AIzaSyA07Q5GUbpQxRfL-KCpfqEhMQaroQECMgI",
         authDomain: "hack-36-50a0f.firebaseapp.com",
@@ -71,7 +71,8 @@
               .getIdToken()
               .then(function (idToken) {
                 // document.cookie = "__session=idToken"
-                window.location.href = "/savecookie?idToken=" + idToken;
+                console.log(tab);
+                window.location.href = "/savecookie?tab=" + tab + "&idToken=" + idToken;
               })
               .catch((error) => {
                 console.log(error);
@@ -83,6 +84,13 @@
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
       ui.start("#firebaseui-auth-container", uiConfig);
+
+      const check_tab = (id) => {
+        console.log(id);
+        tab = id;
+      };
+
+      check_tab("patient");
     </script>
   </body>
 </html>

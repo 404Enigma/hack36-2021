@@ -17,8 +17,10 @@ router.get("/logout", checkCookie, async (req, res) => {
 
 router.get("/savecookie", (req, res) => {
   const Idtoken = req.query.idToken;
+  const category = req.query.tab;
   console.log(Idtoken);
-  savecookie(Idtoken, res);
+  console.log(category);
+  savecookie(Idtoken, res, category);
 });
 
 module.exports = router;
