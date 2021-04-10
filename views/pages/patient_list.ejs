@@ -18,10 +18,18 @@
     <link rel="stylesheet" href="/css/records.css" />
     <link rel="stylesheet" href="/css/patient_list.css" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
@@ -35,32 +43,12 @@
       <!-- Sidebar  -->
       <nav id="sidebar">
         <div class="sidebar-header">
-          <h3>Dawai Wale💊</h3>
+          <h3>Elixicor</h3>
         </div>
-
-        <ul class="list-unstyled components">
-          <li class="active">
-            <a href="#">&nbsp; Records</a>
-          </li>
+        <img src="/images/patient_sidebar.svg" alt="" width="200px" height="200px" id="sidebar_image" />
+        <ul class="list-unstyled CTAs">
           <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">&nbsp; Pages</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <a href="#">Page 1</a>
-              </li>
-              <li>
-                <a href="#">Page 2</a>
-              </li>
-              <li>
-                <a href="#">Page 3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">&nbsp; Portfolio</a>
-          </li>
-          <li>
-            <a href="#">&nbsp; Contact</a>
+            <a href="#">Add New Patient</a>
           </li>
         </ul>
       </nav>
@@ -122,7 +110,9 @@
                         <td>
                           <ul class="list-unstyled mb-0 d-flex justify-content-end">
                             <li>
-                              <a href="/patient/<%=patient.id%>/details" class="btn btn-warning" type="button">Details</a>
+                              <a href="/patient/<%=patient.id%>/details" class="btn btn-warning" type="button"
+                                >Details</a
+                              >
                             </li>
                           </ul>
                         </td>
@@ -140,7 +130,11 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
     <!-- Popper.JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"

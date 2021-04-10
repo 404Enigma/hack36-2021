@@ -172,3 +172,7 @@ input {
 .signin_button {
   margin-top: 70px;
 }
+.logo_div {
+  display: flex;
+  justify-content: center;
+}
