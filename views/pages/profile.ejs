@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elixicor | Profile</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/records.css" />
+    <link rel="stylesheet" href="/css/patient_list.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <%- include('../partials/sidebar.ejs',{para1:'', para2:'',para3:'active'})%>
+      <!-- Page Content  -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i>
+              <span></span>
+            </button>
+            <!-- <button class="btn btn-danger">Logout</button> -->
+            <a href="/logout" class="btn btn-danger" type="button">Logout</a>
+          </div>
+        </nav>
+
+        <div class="container">
+          <h2>Profile</h2>
+          <div class="border border-5 border-info rounded p-5">
+            <table class="table table-hover">
+              <tbody>
+                <tr>
+                  <th scope="row">Name</th>
+                  <td>Pratyush Jain</td>
+                </tr>
+                <tr>
+                  <th scope="row">Age</th>
+                  <td>19 Years</td>
+                </tr>
+                <tr>
+                  <th scope="row">Sex</th>
+                  <td>Male</td>
+                </tr>
+                <tr>
+                  <th scope="row">Height (in m)</th>
+                  <td>1.74</td>
+                </tr>
+                <tr>
+                  <th scope="row">Weight (in kgs)</th>
+                  <td>80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -18,6 +18,10 @@ router.get("/:id/details", checkCookie, async (req, res) => {
   res.render("pages/records", { patient, records, category });
 });
 
+router.get("/profile", checkCookie, (req, res) => {
+  res.render("pages/profile");
+});
+
 router.get("/new", checkCookie, async (req, res) => {
   const recommand_options = {
     disease: "covid",
