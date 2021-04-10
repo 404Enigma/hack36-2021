@@ -20,7 +20,7 @@ router.get("/:id/details", checkCookie, async (req, res) => {
     console.log(records[key]);
   }
 
-  res.render("pages/records", { patient, records, category });
+  res.render("pages/records", { patient, records, category, uniqueID });
 });
 
 router.get("/profile", checkCookie, (req, res) => {
