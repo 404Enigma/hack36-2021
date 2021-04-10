@@ -9,11 +9,13 @@ router.get("/login", (req, res) => {
 
 router.get("/login/patient", (req, res) => {
   const category = "patient";
+
   res.render("pages/login", { category });
 });
 
 router.get("/login/staff", (req, res) => {
   const category = "staff";
+
   res.render("pages/login", { category });
 });
 
@@ -25,12 +27,12 @@ router.get("/logout", checkCookie, async (req, res) => {
   res.redirect("/");
 });
 
-router.get("/savecookie", (req, res) => {
+router.get("/savecookie", (req, res, next) => {
   const Idtoken = req.query.idToken;
   const category = req.query.tab;
   console.log(Idtoken);
   console.log(category);
-  savecookie(Idtoken, res, category);
+  savecookie(Idtoken, req, res, next, category);
 });
 
 module.exports = router;

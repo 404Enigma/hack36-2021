@@ -1,7 +1,9 @@
 const admin = require("../config/db/db");
 const { save_patient } = require("../modal/patient/patient");
 
-function savecookie(idtoken, res, category) {
+const { attach_patient, attach_staff } = require("./category");
+
+function savecookie(idtoken, req, res, next, category) {
   const expiresIn = 60 * 60 * 24 * 5 * 1000;
   admin
     .auth()
@@ -19,9 +21,16 @@ function savecookie(idtoken, res, category) {
             console.log(decodedClaims);
             //save patient and doctor
             if (category == "patient") {
+              //attach_patient(req, res, next);
+              req.session.category = "patient";
+              console.log("\x1b[33m%s\x1b[0m", req.session.category);
               save_patient(decodedClaims.uid, decodedClaims.email, decodedClaims.name, category);
+
               res.redirect("/main?category=" + category);
             } else {
+              // attach_staff(req, res, next);
+              req.session.category = "staff";
+              console.log("\x1b[33m%s\x1b[0m", req.session.category);
               res.redirect("/patient_list");
             }
           });
