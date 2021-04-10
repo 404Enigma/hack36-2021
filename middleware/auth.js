@@ -1,4 +1,5 @@
 const admin = require("../config/db/db");
+const { save_patient } = require("../modal/patient/patient");
 
 function savecookie(idtoken, res, category) {
   const expiresIn = 60 * 60 * 24 * 5 * 1000;
@@ -17,7 +18,9 @@ function savecookie(idtoken, res, category) {
             //save users to database
             console.log(decodedClaims);
             //save patient and doctor
-            //save_user(decodedClaims.uid, decodedClaims.email, decodedClaims.name);
+            if (category == "patient") {
+              save_patient(decodedClaims.uid, decodedClaims.email, decodedClaims.name, category);
+            }
 
             res.redirect("/main?category=" + category);
           });
