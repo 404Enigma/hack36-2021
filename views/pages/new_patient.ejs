@@ -4,9 +4,130 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Patient</title>
+    <title>Elixicor | New Patient</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/records.css" />
+    <link rel="stylesheet" href="/css/patient_list.css" />
+    <!-- Scrollbar Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
+
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>Add patient</h1>
+    <div class="wrapper">
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Elixicor</h3>
+        </div>
+        <img src="/images/patient_sidebar.svg" alt="" width="200px" height="200px" id="sidebar_image" />
+        <!-- <ul class="list-unstyled CTAs">
+          <li class="d-flex justify-content-center">
+            <a href="#" class="article">Add New Patient</a>
+            <button type="button" class="btn article" data-toggle="modal" data-target="#exampleModal">
+              Add New Patient
+            </button>
+          </li>
+        </ul> -->
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i>
+              <span></span>
+            </button>
+            <!-- <button class="btn btn-danger">Logout</button> -->
+            <a href="/logout" class="btn btn-danger" type="button">Logout</a>
+          </div>
+        </nav>
+
+        <h2>New Patient</h2>
+        <div class="d-flex justify-content-center mt-5">
+          <form class="col-8 bg-secondary text-light rounded p-5">
+            <div class="form-group row">
+              <label for="patient_name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="patient_name" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="age" class="col-sm-2 col-form-label">Age</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="age" />
+              </div>
+            </div>
+            <fieldset class="form-group row">
+              <legend class="col-form-label col-sm-2 float-sm-left pt-0">Sex</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gridRadios"
+                    id="gridRadios1"
+                    value="option1"
+                    checked
+                  />
+                  <label class="form-check-label" for="gridRadios1"> Male </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
+                  <label class="form-check-label" for="gridRadios2"> Female </label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group row">
+              <label for="height" class="col-sm-4 col-form-label">Height</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="height" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="weight" class="col-sm-4 col-form-label">Weight</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="weight" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="cuurent_disease" class="col-sm-4 col-form-label">Current Disease</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="cuurent_disease" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
