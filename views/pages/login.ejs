@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
-    <div class="login-wrap">
+    <!-- <div class="login-wrap">
       <div class="login-html">
         <h2>APP NAME</h2>
         <div class="container">
@@ -47,7 +47,21 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <%if(category == 'patient'){%>
+    <div id="patient">
+      <div class="signin_button">
+        <div id="firebaseui-auth-container"> </div>
+      </div>
     </div>
+    <%}else{%>
+    <div id="staff">
+      <div class="signin_button">
+        <div id="firebaseui-auth-container"> </div>
+      </div>
+    </div>
+    <%}%>
 
     <!-- SCRIPTS -->
     <script>
@@ -84,7 +98,14 @@
               .then(function (idToken) {
                 // document.cookie = "__session=idToken"
                 console.log(tab);
-                window.location.href = "/savecookie?tab=" + tab + "&idToken=" + idToken;
+                //console.log(document.getElementById("patient"));
+
+                var el = document.getElementById("patient");
+                if (JSON.stringify(el) != "null") {
+                  window.location.href = "/savecookie?tab=" + "patient" + "&idToken=" + idToken;
+                } else {
+                  window.location.href = "/savecookie?tab=" + "staff" + "&idToken=" + idToken;
+                }
               })
               .catch((error) => {
                 console.log(error);
@@ -97,12 +118,12 @@
       // The start method will wait until the DOM is loaded.
       ui.start("#firebaseui-auth-container", uiConfig);
 
-      const check_tab = (id) => {
-        console.log(id);
-        tab = id;
-      };
+      // const check_tab = (id) => {
+      //   console.log(id);
+      //   tab = id;
+      // };
 
-      check_tab("patient");
+      // check_tab("patient");
     </script>
   </body>
 </html>

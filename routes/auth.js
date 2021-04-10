@@ -4,7 +4,17 @@ const router = express.Router();
 const { checkCookie, savecookie } = require("../middleware/auth");
 
 router.get("/login", (req, res) => {
-  res.render("pages/login");
+  res.redirect("/login/staff");
+});
+
+router.get("/login/patient", (req, res) => {
+  const category = "patient";
+  res.render("pages/login", { category });
+});
+
+router.get("/login/staff", (req, res) => {
+  const category = "staff";
+  res.render("pages/login", { category });
 });
 
 router.get("/logout", checkCookie, async (req, res) => {

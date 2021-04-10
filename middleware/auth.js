@@ -20,9 +20,10 @@ function savecookie(idtoken, res, category) {
             //save patient and doctor
             if (category == "patient") {
               save_patient(decodedClaims.uid, decodedClaims.email, decodedClaims.name, category);
+              res.redirect("/main?category=" + category);
+            } else {
+              res.redirect("/patient_list");
             }
-
-            res.redirect("/main?category=" + category);
           });
       },
       (error) => {
