@@ -47,7 +47,7 @@ const find_Disease = async (uniqueID, disease) => {
 
   const snapshot = await patientListRef
     .doc(uniqueID)
-    .get()
+    .where.get()
     .then((snapshot) => {
       console.log(snapshot.data());
       patient_data = snapshot.data();

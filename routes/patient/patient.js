@@ -20,7 +20,7 @@ router.get("/:id/details", checkCookie, async (req, res) => {
     console.log(records[key]);
   }
 
-  res.render("pages/records", { patient, records, category });
+  res.render("pages/records", { patient, records, category, uniqueID });
 });
 
 router.get("/:id/:disease/treatment", checkCookie, async (req, res) => {
@@ -31,7 +31,7 @@ router.get("/:id/:disease/treatment", checkCookie, async (req, res) => {
   const patient = await find_Disease(uniqueID, disease);
 
   console.log(patient);
-  //res.render("pages/treatment", { patient, records, category });
+  //res.render("pages/treatment", { patient, records, category,disease });
 });
 
 router.get("/profile", checkCookie, (req, res) => {
