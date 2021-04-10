@@ -8,63 +8,42 @@ const newId = uuidv4();
 
 const date = Date.now();
 
-// const data = {
-//   name: "Palak Soni",
-//   uniqueID: newId,
-//   Age: 45,
-//   Sex: "F",
-//   height: 1.4,
-//   weight: 61,
-//   date: date,
-//   Current_disease: "Covid",
-//   Medical_Record: {
-//     Cancer: {
-//       which_year: new Date().getFullYear(),
-//       duration: 1,
-//     },
-//     AIDS: {
-//       which_year: new Date().getFullYear(),
-//       duration: 24,
-//     },
-//   },
-// };
-
 data = {
-  name: "Sudhanshu Pandey",
+  name: "Rashmi Meena",
   uniqueID: newId,
-  Age: 11,
-  Sex: "M",
-  height: 1.2,
-  weight: 71,
+  Age: 24,
+  Sex: "F",
+  height: 1.1,
+  weight: 50,
   date: date,
   Current_disease: "Covid",
-  picture: "https://bootdey.com/img/Content/avatar/avatar8.png",
+  picture: "https://www.bootdey.com/img/Content/avatar/avatar3.png",
   Medical_Record: {
     AIDS: {
       disease: "AIDS",
       Duration: 5,
-      which_year: 2021,
+      year_of_disease: 2021,
       Discription: "health conditions such as cardiovascular disease, kidney disease, diabetes",
       "Chief complain": "acute HIV infection",
     },
     Cancer: {
       disease: "Cancer",
       Duration: 14,
-      which_year: 2019,
+      year_of_disease: 2019,
       Discription: "health conditions such as cardiovascular disease, kidney disease, diabetes",
       "Chief complain": "abdominal pain ,genitourinary",
     },
     Dengue: {
       disease: "Cancer",
       Duration: 9,
-      which_year: 2015,
+      year_of_disease: 2015,
       Discription: "health conditions such as cardiovascular disease, kidney disease, diabetes",
       "Chief complain": " high fever, headache, vomiting, muscle and joint pains, and a characteristic skin rash",
     },
     Chickenpox: {
       disease: "Chickenpox",
       Duration: 2,
-      which_year: 2006,
+      year_of_disease: 2006,
       Discription: "health conditions such as cardiovascular disease, kidney disease, diabetes",
       "Chief complain": "skin rash that forms small, itchy blisters, which eventually scab over",
     },
@@ -80,7 +59,7 @@ const insertList = async (uuid) => {
     });
 };
 
-insertList(newId);
+// insertList(newId);
 
 const getAllPatient = async () => {
   let tempDoc;
