@@ -13,7 +13,12 @@ router.get("/:id/details", checkCookie, async (req, res) => {
   const patient = await find_Patient(uniqueID);
 
   const records = patient.Medical_Record;
-  console.log(Object.keys(records));
+  //console.log(Object.keys(records));
+
+  for (const key in records) {
+    console.log(`${key} : ${records[key]}`);
+    console.log(records[key]);
+  }
 
   res.render("pages/records", { patient, records, category });
 });
