@@ -14,9 +14,11 @@ app.use(bodyparser.json());
 
 const index = require("./routes/index");
 const auth = require("./routes/auth");
+const patient = require("./routes/patient/patient");
 
 app.use(index);
 app.use(auth);
+app.use("/patient", patient);
 
 app.listen(PORT, () => {
   console.log(`Listining on ${PORT}`);

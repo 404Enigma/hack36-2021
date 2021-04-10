@@ -1,6 +1,7 @@
 const admin = require("../../config/db/db");
 const db = admin.firestore();
 const patientRef = db.collection("Patient");
+const patientListRef = db.collection("Patients List");
 
 const save_patient = async (uid, email, name, category) => {
   await patientRef
@@ -32,4 +33,12 @@ const patient_exist = async (uid) => {
   return isexist;
 };
 
-module.exports = { save_patient, patient_exist };
+const find_Patient = async (uniqueID) => {
+  console.log(uniqueID);
+  const snapshot = await patientListRef.doc(uniqueID).get();
+  const patient_data = snapshot.data();
+  console.log(patient_data);
+  return patient_data;
+};
+
+module.exports = { save_patient, patient_exist, find_Patient };
