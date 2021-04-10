@@ -27,11 +27,11 @@ router.get("/:id/:disease/treatment", checkCookie, async (req, res) => {
   const category = req.session.category;
   console.log("\x1b[36m%s\x1b[0m", category);
   const uniqueID = req.params.id;
-  const disease = req.params.disease;
-  const patient = await find_Disease(uniqueID, disease);
+  const disease_name = req.params.disease;
+  const disease = await find_Disease(uniqueID, disease_name);
 
-  console.log(patient);
-  //res.render("pages/treatment", { patient, records, category,disease });
+  console.log(disease);
+  res.render("pages/treatment", { disease, category, disease_name, uniqueID });
 });
 
 router.get("/profile", checkCookie, (req, res) => {

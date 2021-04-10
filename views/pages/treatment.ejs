@@ -17,18 +17,10 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="/css/records.css" />
     <!-- Scrollbar Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
 
     <!-- Font Awesome JS -->
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-      crossorigin="anonymous"
-    ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
@@ -50,7 +42,7 @@
             <a href="/patient/<%=uniqueID%>/details">&nbsp; EMR</a>
           </li>
           <li class="active">
-            <a href="/patient/<%=uniqueID%>/<%=disease%>/treatment">&nbsp; Treatment</a>
+            <a href="/patient/<%=uniqueID%>/<%=disease_name%>/treatment">&nbsp; Treatment</a>
           </li>
           <li>
             <a href="/patient/<%=uniqueID%>/profile">&nbsp; Profile</a>
@@ -66,7 +58,7 @@
               <i class="fas fa-align-left"></i>
               <span></span>
             </button>
-            <h3><%=patient.name%></h3>
+            <h3><%=disease_name%></h3>
             <!-- <button class="btn btn-danger">Logout</button> -->
             <a href="/logout" class="btn btn-danger" type="button">Logout</a>
           </div>
@@ -110,17 +102,8 @@
                 <div class="card-body">
                   <div class="float-right text-success small">Jan 10th 2019 8:30 AM</div>
                   <h4 class="card-title text-success">Day 2 Sessions</h4>
-                  <p class="card-text"
-                    >Sign-up for the lessons and speakers that coincide with your course syllabus. Meet and greet with
-                    instructors.</p
-                  >
-                  <button
-                    class="btn btn-sm btn-outline-secondary"
-                    type="button"
-                    data-target="#t22_details"
-                    data-toggle="collapse"
-                    >Show Details ▼</button
-                  >
+                  <p class="card-text">Sign-up for the lessons and speakers that coincide with your course syllabus. Meet and greet with instructors.</p>
+                  <button class="btn btn-sm btn-outline-secondary" type="button" data-target="#t22_details" data-toggle="collapse">Show Details ▼</button>
                   <div class="collapse border" id="t22_details">
                     <div class="p-2 text-monospace">
                       <div>08:30 - 09:00 Breakfast in CR 2A</div>
@@ -207,11 +190,7 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
