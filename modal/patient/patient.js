@@ -41,4 +41,20 @@ const find_Patient = async (uniqueID) => {
   return patient_data;
 };
 
-module.exports = { save_patient, patient_exist, find_Patient };
+const find_Disease = async (uniqueID, disease) => {
+  console.log(uniqueID, disease);
+  let patient_data;
+
+  const snapshot = await patientListRef
+    .doc(uniqueID)
+    .get()
+    .then((snapshot) => {
+      console.log(snapshot.data());
+      patient_data = snapshot.data();
+    });
+
+  console.log(patient_data);
+  return patient_data;
+};
+
+module.exports = { save_patient, patient_exist, find_Patient, find_Disease };
