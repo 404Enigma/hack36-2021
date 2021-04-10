@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Patient Page</title>
+    <title>Elixicor | Records</title>
 
     <!-- Bootstrap CSS CDN -->
     <link
@@ -17,10 +17,18 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="/css/records.css" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+    />
 
     <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
@@ -75,6 +83,7 @@
               <i class="fas fa-align-left"></i>
               <span></span>
             </button>
+            <h3><%=patient.name%></h3>
             <!-- <button class="btn btn-danger">Logout</button> -->
             <a href="/logout" class="btn btn-danger" type="button">Logout</a>
           </div>
@@ -87,11 +96,11 @@
             <%Object.keys(records).map((disease) => {%>
             <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
               <div class="timeline-arrow"></div>
-              <h2 class="h5 mb-0">disease.name</h2>
+              <h2 class="h5 mb-0"> <%=disease.disease%></h2>
               <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
               <p class="text-small mt-2 font-weight-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula
-                in sodales vehicula....
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et
+                elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....
               </p>
             </li>
             <%})%>
@@ -102,7 +111,11 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
     <!-- Popper.JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"

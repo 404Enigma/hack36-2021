@@ -15,7 +15,7 @@ router.get("/:id/details", checkCookie, async (req, res) => {
   const records = patient.Medical_Record;
   console.log(Object.keys(records));
 
-  res.render("pages/records", { records, category });
+  res.render("pages/records", { patient, records, category });
 });
 
 router.get("/new", checkCookie, async (req, res) => {
