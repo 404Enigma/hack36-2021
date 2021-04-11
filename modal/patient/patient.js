@@ -3,6 +3,8 @@ const db = admin.firestore();
 const patientRef = db.collection("Patient");
 const patientListRef = db.collection("Patients List");
 
+const { v4: uuidv4 } = require("uuid");
+
 const save_patient = async (uid, email, name, category) => {
   await patientRef
     .doc(uid)
@@ -58,4 +60,26 @@ const find_Disease = async (uniqueID, disease_name) => {
   return disease_data;
 };
 
-module.exports = { save_patient, patient_exist, find_Patient, find_Disease };
+const add_patient = async (patient_data) => {
+  const newId = uuidv4();
+  patient_data.new = true;
+
+  if (patient_data.Sex == "male") {
+    patient_data.picture = "https://bootdey.com/img/Content/avatar/avatar5.png";
+  } else {
+    patient_data.picture = "https://bootdey.com/img/Content/avatar/avatar8.png";
+  }
+
+  await patientListRef
+    .doc(newId)
+    .set(patient_data)
+    .then(() => {
+      console.log("Patient added to database");
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+  return newId;
+};
+
+module.exports = { save_patient, patient_exist, find_Patient, find_Disease, add_patient };

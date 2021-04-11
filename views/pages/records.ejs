@@ -17,18 +17,10 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="/css/records.css" />
     <!-- Scrollbar Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" />
 
     <!-- Font Awesome JS -->
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
-      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
-      crossorigin="anonymous"
-    ></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
@@ -76,17 +68,14 @@
         <div class="col-lg-9 mx-auto">
           <!-- Timeline -->
           <ul class="timeline">
-            <%Object.keys(records).map((disease) => {%>
+            <%for (const disease in records) {%>
             <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
               <div class="timeline-arrow"></div>
-              <h2 class="h5 mb-0"> <%=disease.disease%></h2>
-              <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>21 March, 2019</span>
-              <p class="text-small mt-2 font-weight-light">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et
-                elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....
-              </p>
+              <h2 class="h5 mb-0"> <%=disease%></h2>
+              <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i><%= records[disease].year_of_disease%></span>
+              <p class="text-small mt-2 font-weight-light"> ><%= records[disease].Discription%> </p>
             </li>
-            <%})%>
+            <%}%>
           </ul>
           <!-- End -->
         </div>
@@ -94,11 +83,7 @@
     </div>
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"

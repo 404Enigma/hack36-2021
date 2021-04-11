@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const { checkCookie, savecookie } = require("../../middleware/auth");
-const { find_Patient, find_Disease } = require("../../modal/patient/patient");
+const { find_Patient, find_Disease, add_patient } = require("../../modal/patient/patient");
 
 require("dotenv").config();
 
@@ -74,4 +74,12 @@ router.get("/new", checkCookie, async (req, res) => {
   res.render("pages/new_patient");
 });
 
+router.post("/new", checkCookie, async (req, res) => {
+  const patient_data = req.body;
+
+  console.log(patient_data);
+  const new_patient = await add_patient(patient_data);
+
+  new_patient ? res.json("success") : res.status(404);
+});
 module.exports = router;
