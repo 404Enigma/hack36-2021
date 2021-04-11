@@ -4,7 +4,7 @@
 
 ## Introduction:
 
-Intro of the project
+Elixicor is a platform whose motto is to provide the medical service "contactless through digitally". It tackles the problem of the medical staff coming in contact with each other especially during this high time when Corona is leading the world. It can also be used to inform the doctor with the best medicine which should be prescribed to the patient during consultancy and a period of time a patient will generally take to be completely disease-free based on the following attributes like weight, height, gender, etc to predict the results more accurately.
 
 ## Demo Video Link:
 
@@ -21,6 +21,8 @@ Intro of the project
 <ul>
 <li>JavaScript</li>
 <li>Node.js</li>
+<li>Flutter</li>
+<li>Dart</li>
 <li>HTML5 / CSS</li>
 <li>jQuery</li>
 <li>Bootstrap</li>
