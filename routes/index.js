@@ -4,7 +4,7 @@ const router = express.Router();
 const { checkCookie, savecookie } = require("../middleware/auth");
 const { getAllPatient } = require("../modal/patient/patient_list");
 const { attach_patient, attach_staff } = require("../middleware/category");
-
+require("dotenv").config();
 router.get("/", (req, res) => {
   res.render("pages/home");
 });
@@ -27,13 +27,10 @@ router.get("/patient_list", async (req, res) => {
 
 router.get("/main", checkCookie, (req, res) => {
   const category = req.query.category;
+  console.log(process.env.id1);
 
+  res.redirect("/patient/" + process.env.id1 + "/details");
   console.log(category);
-  if (category == "doctor") {
-    res.render("pages/patient_list");
-  } else {
-    res.render("pages/records");
-  }
 });
 
 module.exports = router;

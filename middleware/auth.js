@@ -26,7 +26,7 @@ function savecookie(idtoken, req, res, next, category) {
               console.log("\x1b[33m%s\x1b[0m", req.session.category);
               save_patient(decodedClaims.uid, decodedClaims.email, decodedClaims.name, category);
 
-              res.redirect("/main?category=" + category);
+              res.redirect("/main");
             } else {
               // attach_staff(req, res, next);
               req.session.category = "staff";
