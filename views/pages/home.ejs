@@ -4,68 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Elixicor | Home</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <style>
+      .nav-link {
+        font-size: x-large;
+      }
+      .nav-link:hover {
+        text-decoration: underline;
+        font-size: x-large;
+      }
+      h1 {
+        font-size: 3em;
+      }
+      p {
+        font-size: larger;
+      }
+      #patient {
+        margin-left: 15px;
+      }
+      @media (max-width: 991px) {
+        #patient {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(37, 87, 161)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+          <img src="/images/logo.png" width="80" height="80" alt="" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a href="/login/staff" class="btn btn-outline-light">Staff</a>
+            <a href="/login/patient" class="btn btn-outline-light" id="patient">Patient</a>
+          </div>
         </div>
       </div>
     </nav>
+
     <div class="container mt-5">
-      <h1>Home Page</h1>
-      <a href="/login/staff" type="button" class="btn btn-danger">Doctor</a>
-      <a href="/login/patient" type="button" class="btn btn-warning">Patient</a>
+      <div class="row">
+        <div class="col-12 col-sm-6 my-auto">
+          <div class="container">
+            <h1>Elixicor</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati quaerat veniam sunt fuga
+              magni ea odit non est dolore, nam libero quis. Vero commodi cumque modi exercitationem cupiditate
+              dignissimos.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <img src="/images/home-1.png" alt="" width="100%" />
+        </div>
+      </div>
     </div>
 
     <!-- SCRIPTS -->
