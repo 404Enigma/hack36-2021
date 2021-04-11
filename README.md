@@ -13,6 +13,7 @@ Elixicor is a platform whose motto is to provide the medical service "contactles
 ## Presentation Link:
 
 <a href="https://drive.google.com/file/d/1fWS372pYAwvYckhIH7qO6VZ69He9JsOf/view?usp=sharing"> PPT Link Here </a>
+<a href="https://drive.google.com/file/d/14nfo6SRxTtLbEOe0IpJrXeA6xHTCi-mL/view?usp=sharing"> PDF Link Here </a>
 
 ## Table of Contents:
 
