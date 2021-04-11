@@ -38,11 +38,25 @@ router.get("/profile", checkCookie, (req, res) => {
   res.render("pages/profile");
 });
 
-router.get("/new", checkCookie, async (req, res) => {
+router.post("/new", checkCookie, async (req, res) => {
+  let med_value = "Med1";
+  let { Age, Sex, height, weight, Current_disease } = req.body;
+
+  if (Sex == "male") {
+    Sex = 1;
+  } else {
+    Sex = 0;
+  }
+
+  const patient_data = { age: Age, sex: Sex, height, weight, disease: Current_disease };
+
+  patient_data.no_of_med = 4;
+  console.log(patient_data);
+
   const recommand_options = {
     disease: "covid",
     age: 56,
-    sex: "M",
+    sex: 1,
     height: 1.45,
     weight: 56,
     no_of_med: 2,
@@ -62,24 +76,47 @@ router.get("/new", checkCookie, async (req, res) => {
     no_of_med: 2,
   };
 
-  axios
-    .get("https://recommend-anomaly.herokuapp.com/", { recommand_options })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((e) => {
-      console.log(e);
-    });
+  const response = await axios.get(process.env.RecommendAPI, {
+    params: patient_data,
+  });
 
-  res.render("pages/new_patient");
-});
+  const values = await response.data;
 
-router.post("/new", checkCookie, async (req, res) => {
-  const patient_data = req.body;
+  console.log(values);
+  // const valueObj = JSON.parse(values);
+  // console.log(valueObj);
+  let l1 = Object.values(values);
+  let l2 = Object.keys(values);
 
-  console.log(patient_data);
+  console.log(l1, l2);
+
+  for (let k in values) {
+    if (values[k] === "1") {
+      console.log(k);
+    }
+  }
+
   const new_patient = await add_patient(patient_data);
 
-  new_patient ? res.json("success") : res.status(404);
+  //new_patient ? res.json("success") : res.status(404);
+
+  res.render("pages/new_patient", { med_value });
 });
+
+router.get("/new", checkCookie, async (req, res) => {
+  let med_value;
+  res.render("pages/new_patient", { med_value });
+});
+
+router.get("/:id/:disease/todo", checkCookie, async (req, res) => {
+  const category = req.session.category;
+  console.log("\x1b[36m%s\x1b[0m", category);
+  const uniqueID = req.params.id;
+  const disease_name = req.params.disease;
+  const disease = await find_Disease(uniqueID, disease_name);
+
+  console.log(disease);
+  res.render("pages/todo", { disease, category, disease_name, uniqueID });
+});
+
 module.exports = router;

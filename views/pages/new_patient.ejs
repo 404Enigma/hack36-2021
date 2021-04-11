@@ -112,6 +112,10 @@
               </div>
             </div>
           </form>
+
+          <%if(med_value){%>
+          <div class="alert alert-warning" role="alert"> <%=med_value%> </div>
+          <%}%>
         </div>
       </div>
     </div>
@@ -128,6 +132,7 @@
 
         axios.post("/patient/new", data).then(function (response) {
           console.log(response);
+          alert(response.valueObj);
         });
       });
     </script>
