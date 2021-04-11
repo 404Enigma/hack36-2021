@@ -8,7 +8,7 @@ Elixicor is a platform whose motto is to provide the medical service "contactles
 
 ## Demo Video Link:
 
-<a href="#">Demo Video Here</a>
+<a href="https://drive.google.com/file/d/1-4yPeZUPOdUBv-2lmW6xDaId_hogGrZA/view">Demo Video Here</a>
 
 ## Presentation Link:
 <h2>PPT Link</h2>
