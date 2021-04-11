@@ -13,6 +13,10 @@ router.get("/treatment", (req, res) => {
   res.render("pages/treatment");
 });
 
+router.get("/prediction", (req, res) => {
+  res.render("pages/prediction");
+});
+
 router.get("/patient_list", async (req, res) => {
   console.log("\x1b[36m%s\x1b[0m", req.session.category);
   const patient_list = await getAllPatient();
