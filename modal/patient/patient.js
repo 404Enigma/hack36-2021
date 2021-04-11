@@ -2,6 +2,7 @@ const admin = require("../../config/db/db");
 const db = admin.firestore();
 const patientRef = db.collection("Patient");
 const patientListRef = db.collection("Patients List");
+const Synchronal_Catalogue_Ref = db.collection("Synchronal Catalogue");
 
 const { v4: uuidv4 } = require("uuid");
 
@@ -82,4 +83,16 @@ const add_patient = async (patient_data) => {
   return newId;
 };
 
-module.exports = { save_patient, patient_exist, find_Patient, find_Disease, add_patient };
+const find_Disease_synchronal = async (uniqueID) => {
+  let synchronal_disease_data;
+
+  const snapshot = await Synchronal_Catalogue_Ref.doc(uniqueID)
+    .get()
+    .then((snapshot) => {
+      synchronal_disease_data = snapshot.data();
+    });
+
+  return synchronal_disease_data;
+};
+
+module.exports = { save_patient, patient_exist, find_Patient, find_Disease, add_patient, find_Disease_synchronal };

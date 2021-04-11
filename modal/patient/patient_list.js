@@ -4,20 +4,22 @@ const admin = require("../../config/db/db");
 const db = admin.firestore();
 const patientListRef = db.collection("Patients List");
 
+const Synchronal_Catalogue_Ref = db.collection("Synchronal Catalogue");
+
 const newId = uuidv4();
 
 const date = Date.now();
 
-data = {
-  name: "Rashmi Meena",
+const data = {
+  name: "Rahul Mansharamani",
   uniqueID: newId,
-  Age: 24,
-  Sex: "F",
-  height: 1.1,
-  weight: 50,
+  Age: 19,
+  Sex: "M",
+  height: 1.4,
+  weight: 67,
   date: date,
-  Current_disease: "Covid",
-  picture: "https://www.bootdey.com/img/Content/avatar/avatar3.png",
+  Current_disease: "Dengue",
+  picture: "https://www.bootdey.com/img/Content/avatar/avatar5.png",
   Medical_Record: {
     AIDS: {
       disease: "AIDS",
@@ -50,16 +52,32 @@ data = {
   },
 };
 
+const treat_data = {
+  Anaesthesia: "Sedate the patient to increase his feeling of well-being during the operation process.",
+  Finished: "Operation is finished. Patient is allowed to wake up slowly from the surgery.",
+  Operation: "Perform the actual medical surgery.",
+  Preparation: "Prepare the operating room as well as the patient.",
+};
+
 const insertList = async (uuid) => {
   patientListRef
     .doc(uuid)
     .set(data)
     .then(function () {
-      console.log("Successfully updated!");
+      console.log("Successfully inserted!");
+    });
+};
+
+const liveStatus = async (uuid) => {
+  Synchronal_Catalogue_Ref.doc(uuid)
+    .set(treat_data)
+    .then(function () {
+      console.log("Successfully inserted!");
     });
 };
 
 // insertList(newId);
+// liveStatus(newId);
 
 const getAllPatient = async () => {
   let tempDoc;

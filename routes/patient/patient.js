@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const { checkCookie, savecookie } = require("../../middleware/auth");
-const { find_Patient, find_Disease, add_patient } = require("../../modal/patient/patient");
+const { find_Patient, find_Disease, add_patient, find_Disease_synchronal } = require("../../modal/patient/patient");
 
 require("dotenv").config();
 
@@ -29,17 +29,25 @@ router.get("/:id/:disease/treatment", checkCookie, async (req, res) => {
   const uniqueID = req.params.id;
   const disease_name = req.params.disease;
   const disease = await find_Disease(uniqueID, disease_name);
+  const synchronal = await find_Disease_synchronal(uniqueID);
 
-  console.log(disease);
-  res.render("pages/treatment", { disease, category, disease_name, uniqueID });
+  console.log(synchronal);
+
+  for (let key in synchronal) {
+    console.log(key, synchronal[key]);
+  }
+  res.render("pages/treatment", { disease, category, disease_name, uniqueID, synchronal });
 });
 
-router.get("/profile", checkCookie, (req, res) => {
-  res.render("pages/profile");
+router.get("/:id/profile", checkCookie, async (req, res) => {
+  const category = req.session.category;
+  console.log("\x1b[36m%s\x1b[0m", category);
+  const uniqueID = req.params.id;
+  const patient = await find_Patient(uniqueID);
+  res.render("pages/profile", { category, uniqueID, patient });
 });
 
 router.post("/new", checkCookie, async (req, res) => {
-  let med_value = "Med1";
   let { Age, Sex, height, weight, Current_disease } = req.body;
 
   if (Sex == "male") {
@@ -82,25 +90,23 @@ router.post("/new", checkCookie, async (req, res) => {
 
   const values = await response.data;
 
-  console.log(values);
-  // const valueObj = JSON.parse(values);
-  // console.log(valueObj);
-  let l1 = Object.values(values);
-  let l2 = Object.keys(values);
+  let a = {};
 
-  console.log(l1, l2);
+  console.log(values[0]);
 
-  for (let k in values) {
-    if (values[k] === "1") {
-      console.log(k);
-    }
+  for (let i = 0; i < values.length; i++) {
+    a[i] = values[i];
   }
+  //const med_value = Object.assign({}, values);
+
+  console.log(a);
 
   const new_patient = await add_patient(patient_data);
 
-  //new_patient ? res.json("success") : res.status(404);
+  console.log(med_value);
+  new_patient ? res.json({}) : res.status(404);
 
-  res.render("pages/new_patient", { med_value });
+  //res.render("pages/new_patient", { med_value });
 });
 
 router.get("/new", checkCookie, async (req, res) => {
