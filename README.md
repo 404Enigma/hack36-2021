@@ -8,11 +8,11 @@ Intro of the project
 
 ## Demo Video Link:
 
-<a href="https://youtu.be/dQw4w9WgXcQ">https://youtu.be/dQw4w9WgXcQ</a>
+<a href="#">Demo Video Here</a>
 
 ## Presentation Link:
 
-<a href="https://docs.google.com/presentation/d/1NEbqpM6J6UkmHN_J6NsgOhKvDU6fkfnli4OIg1lh-pk/edit?usp=sharing"> PPT Link Here </a>
+<a href="#"> PPT Link Here </a>
 
 ## Table of Contents:
 
