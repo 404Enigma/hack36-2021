@@ -39,6 +39,12 @@ router.get("/:id/profile", checkCookie, async (req, res) => {
   console.log("\x1b[36m%s\x1b[0m", category);
   const uniqueID = req.params.id;
   const patient = await find_Patient(uniqueID);
+
+  if (patient.Sex == "M") {
+    patient.Sex = "Male";
+  } else {
+    patient.Sex = "Female";
+  }
   res.render("pages/profile", { category, uniqueID, patient });
 });
 
