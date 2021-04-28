@@ -1,7 +1,16 @@
-<h1 align="center">Elixicor</h1>
-
+<div align="center">
+<img src="https://github.com/404Enigma/hack36-2021/blob/main/public/images/logo.png">
+<h1>Elixicor</h1>
 <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
+</div>
+&nbsp;
+&nbsp;
 
+> # The Cessation!
+>
+> ## 🏅 Acquired a position under top 20 out of 200+ submissions.
+
+&nbsp;
 ## Introduction:
 
 Elixicor is a platform whose motto is to provide the medical service "contactless through digitally". It tackles the problem of the medical staff coming in contact with each other especially during this high time when Corona is leading the world. It can also be used to inform the doctor with the best medicine which should be prescribed to the patient during consultancy and a period of time a patient will generally take to be completely disease-free based on the following attributes like weight, height, gender, etc to predict the results more accurately.
