@@ -1,18 +1,31 @@
-<h1 align="center">Elixicor</h1>
-
+<div align="center">
+<img src="https://github.com/404Enigma/hack36-2021/blob/main/public/images/logo.png">
+<h1>Elixicor</h1>
 <a href="https://hack36.com"> <img src="http://bit.ly/BuiltAtHack36" height=20px> </a>
+</div>
+&nbsp;
+&nbsp;
 
+> # The Cessation!
+>
+> ## 🏅 Acquired a position under top 20 out of 200+ submissions.
+
+&nbsp;
 ## Introduction:
 
-Intro of the project
+Elixicor is a platform whose motto is to provide the medical service "contactless through digitally". It tackles the problem of the medical staff coming in contact with each other especially during this high time when Corona is leading the world. It can also be used to inform the doctor with the best medicine which should be prescribed to the patient during consultancy and a period of time a patient will generally take to be completely disease-free based on the following attributes like weight, height, gender, etc to predict the results more accurately.
 
 ## Demo Video Link:
 
-<a href="#">Demo Video Here</a>
+<a href="https://drive.google.com/file/d/1-4yPeZUPOdUBv-2lmW6xDaId_hogGrZA/view">Demo Video Here</a>
 
 ## Presentation Link:
-
-<a href="#"> PPT Link Here </a>
+<h2>PPT Link</h2>
+<a href="https://drive.google.com/file/d/1fWS372pYAwvYckhIH7qO6VZ69He9JsOf/view?usp=sharing"> PPT Link Here </a>
+&nbsp;
+&nbsp;
+<h2>PDF Link</h2>
+<a href="https://drive.google.com/file/d/14nfo6SRxTtLbEOe0IpJrXeA6xHTCi-mL/view?usp=sharing"> PDF Link Here </a>
 
 ## Table of Contents:
 
@@ -21,6 +34,8 @@ Intro of the project
 <ul>
 <li>JavaScript</li>
 <li>Node.js</li>
+<li>Flutter</li>
+<li>Dart</li>
 <li>HTML5 / CSS</li>
 <li>jQuery</li>
 <li>Bootstrap</li>
